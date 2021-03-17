@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_bottom_sheet"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settings_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="48dp"
+            app:icon="@drawable/ic_settings"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/message_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="48dp"
+            app:icon="@drawable/ic_outline_message"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="24dp"
+            app:iconTint="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.maksat.uni.customUI.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/image" />
+
+        <LinearLayout
+            android:id="@+id/events_lo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/loading"
+                android:textColor="#DE000000"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/event_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    app:drawableEndCompat="@drawable/ic_arrow_drop_down" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/home_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.1"
+        android:paddingStart="24dp"
+        android:text="@string/main"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#99000000"
+        android:typeface="normal"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_home"
+        app:iconGravity="start"
+        app:iconPadding="16dp"
+        app:iconTint="#000000"
+        app:rippleColor="#1AE5097F"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/stat_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.1"
+        android:paddingStart="24dp"
+        android:text="@string/statistic"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#99000000"
+        android:typeface="normal"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_chart"
+        app:iconGravity="start"
+        app:iconPadding="16dp"
+        app:iconTint="#000000"
+        app:rippleColor="#1AE5097F"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/memb_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.1"
+        android:paddingStart="24dp"
+        android:text="@string/participants"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#99000000"
+        android:typeface="normal"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_people"
+        app:iconGravity="start"
+        app:iconPadding="16dp"
+        app:iconTint="#000000"
+        app:rippleColor="#1AE5097F"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calndr_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.1"
+        android:paddingStart="24dp"
+        android:text="@string/events_program"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#99000000"
+        android:typeface="normal"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_calendar"
+        app:iconGravity="start"
+        app:iconPadding="16dp"
+        app:iconTint="#000000"
+        app:rippleColor="#1AE5097F"
+        tools:ignore="RtlSymmetry" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cntcts_btn"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:letterSpacing="0.1"
+        android:paddingStart="24dp"
+        android:text="@string/contacts"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#99000000"
+        android:typeface="normal"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/ic_contacts"
+        app:iconGravity="start"
+        app:iconPadding="16dp"
+        app:iconTint="#000000"
+        app:rippleColor="#1AE5097F"
+        tools:ignore="RtlSymmetry" />
+
+</LinearLayout>

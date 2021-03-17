@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FECC00</color>
+    <color name="colorPrimaryDark">#ecbc04</color>
+    <color name="colorPrimaryRipple">#14FECC00</color>
+    <color name="colorAccent">#E5097F</color>
+    <color name="colorAccentRipple">#1AE5097F</color>
+    <color name="colorSecondary">#01A299</color>
+    <color name="white">#ffffff</color>
+    <color name="colorRipple">#144B00B3</color>
+    <color name="filterAppBarColor">#3E3E3E</color>
+    <color name="filterStatusBarColor">#212121</color>
+    <color name="filterTextColor">#878787</color>
+    <color name="itemHighlightColor">#1F000000</color>
+</resources>
